@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/autoexpl/xqb/gen_guess_llama_split.py", line 5, in <module>
+    from autoexpl.tools import llama_lib as llama
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/autoexpl/tools/llama_lib.py", line 17, in <module>
+    from llama import ModelArgs, Transformer, Tokenizer, LLaMA
+ModuleNotFoundError: No module named 'llama'
+E0311 17:45:25.112698 2803619 .venv/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 2803621) of binary: /fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/bin/python3.9
+Traceback (most recent call last):
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+autoexpl/xqb/gen_guess_llama_split.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-11_17:45:25
+  host      : tron63.umiacs.umd.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2803621)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

@@ -11,4 +11,9 @@ PORT=29509
 
 TARGET_FOLDER=/path/to/llama_weights
 SCRIPT=autoexpl/xqb/gen_guess_llama_split.py
-torchrun --nnodes=1 --master_port $PORT --nproc_per_node $MP $SCRIPT --lang $LANG --dataset-name $DATASET --ckpt-dir $TARGET_FOLDER/$model_size --start $START --end $END --max-seq-len $MAX_LEN
+#torchrun --nnodes=1 --master_port $PORT --nproc_per_node $MP $SCRIPT --lang $LANG --dataset-name $DATASET --ckpt-dir $TARGET_FOLDER/$model_size --start $START --end $END --max-seq-len $MAX_LEN
+
+# hiba: trying below since the line above throws the following error: torchrun: error: ambiguous option: --start could match --start-method, --start_method
+torchrun --nnodes=1 --master_port $PORT --nproc_per_node $MP -- \
+    $SCRIPT --lang $LANG --dataset-name $DATASET --ckpt-dir $TARGET_FOLDER/$model_size \
+    --start $START --end $END --max-seq-len $MAX_LEN
