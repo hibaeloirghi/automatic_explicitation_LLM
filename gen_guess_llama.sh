@@ -20,6 +20,7 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)/autoexpl
 
 # set hf token as an environment variable
 export HF_HOME="/fs/clip-scratch/eloirghi/explicitation/.cache"
+export HF_TOKEN="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"
 
 
 LANG=en
