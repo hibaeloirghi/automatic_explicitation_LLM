@@ -1,0 +1,16 @@
+2025-03-27 23:17:39,318 Loaded file succesfully in 0.121sec, size: 3.4MiB, loc: xqb_eval/extrinsic/esqbv1htall.pair_coment_charentskip_dedup_gent4.en.json 
+2025-03-27 23:17:39,322 Loaded file succesfully in 0.002sec, size: 5.0B, loc: xqb_eval/extrinsic/rawresult.LLaMA7B.esqbv1htall.pair_coment_charentskip_dedup_gent4.en.i0--1.pkl 
+2025-03-27 23:41:14,455 Success 0/2154 exp_id=30000000000 takes 1295.577 sec. len(results)=32
+2025-03-28 00:04:20,623 Success 1/2154 exp_id=30000000001 takes 1386.166 sec. len(results)=32
+2025-03-28 00:15:20,938 Success 2/2154 exp_id=30000000002 takes 660.312 sec. len(results)=32
+2025-03-28 00:35:46,739 Success 3/2154 exp_id=30000000003 takes 1225.799 sec. len(results)=32
+2025-03-28 00:57:53,892 Success 4/2154 exp_id=30000000100 takes 1327.150 sec. len(results)=32
+2025-03-28 01:16:49,640 Success 5/2154 exp_id=30000000101 takes 1135.746 sec. len(results)=32
+2025-03-28 01:36:46,189 Success 6/2154 exp_id=30000000102 takes 1196.547 sec. len(results)=32
+2025-03-28 01:58:55,533 Success 7/2154 exp_id=30000000200 takes 1329.342 sec. len(results)=32
+2025-03-28 02:18:08,317 Success 8/2154 exp_id=30000000202 takes 1152.781 sec. len(results)=32
+2025-03-28 02:37:52,222 Success 9/2154 exp_id=30000000203 takes 1183.901 sec. len(results)=32
+2025-03-28 03:00:21,015 Success 10/2154 exp_id=30000000300 takes 1348.791 sec. len(results)=32
+2025-03-28 03:24:32,334 Success 11/2154 exp_id=30000000301 takes 1451.314 sec. len(results)=32
+2025-03-28 03:47:00,014 Success 12/2154 exp_id=30000000302 takes 1347.677 sec. len(results)=32
+2025-03-28 04:08:58,595 Success 13/2154 exp_id=30000000400 takes 1318.579 sec. len(results)=32

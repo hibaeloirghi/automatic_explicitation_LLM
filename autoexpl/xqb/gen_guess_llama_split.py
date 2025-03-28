@@ -1,10 +1,28 @@
 import os, sys, time, logging, argparse
+import torch.distributed as dist
+import torch
+import torch.distributed as dist
 from tqdm import tqdm
 from typing import Any, Dict, List, Optional, Tuple, Union
 from autoexpl.tools import fileio
 from autoexpl.tools import llama_lib as llama
 from autoexpl.xqb import utils
 from autoexpl.xqb import gen_prompt
+
+
+
+def init_distributed():
+    if not dist.is_initialized():
+        # Initialize the process group
+        dist.init_process_group(
+            backend="nccl",  # Use NCCL backend for GPU
+            init_method="env://",  # Use environment variables for initialization
+        )
+        # Set the device to the local rank
+        local_rank = int(os.environ.get("LOCAL_RANK", 0))
+        torch.cuda.set_device(local_rank)
+        return True
+    return False
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -123,6 +141,14 @@ def generate_guess(
 
 
 def main(args):
+    # Initialize distributed environment
+    init_distributed()
+    
+    qanta_filename = os.path.join(
+        args.data_dir,
+        f"{args.dataset_name}.{args.version_name}.{args.lang}.json",
+    )
+
     qanta_filename = os.path.join(
         args.data_dir,
         f"{args.dataset_name}.{args.version_name}.{args.lang}.json",

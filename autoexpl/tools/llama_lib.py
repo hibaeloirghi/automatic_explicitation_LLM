@@ -1,3 +1,40 @@
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+def get_llama_generator(ckpt_dir=None, max_seq_len=2048, max_batch_size=32):
+    # Load model directly from Hugging Face
+    model_id = "meta-llama/Llama-3.1-8B"
+    
+    # Load tokenizer and model
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        torch_dtype=torch.bfloat16,
+        device_map="auto"
+    )
+    
+    class Generator:
+        def __init__(self, model, tokenizer):
+            self.model = model
+            self.tokenizer = tokenizer
+            
+        def generate(self, prompts, max_gen_len, temperature=0.8, top_p=0.95):
+            results = []
+            for prompt in prompts:
+                inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
+                outputs = self.model.generate(
+                    **inputs,
+                    max_new_tokens=max_gen_len,
+                    temperature=temperature,
+                    top_p=top_p
+                )
+                result = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+                results.append(result)
+            return results
+    
+    return Generator(model, tokenizer)
+    
+'''
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 # This software may be used and distributed according to the terms of the GNU General Public License version 3.
 # Using old version https://github.com/meta-llama/llama/tree/57b0eb62de0636e75af471e49e2f1862d908d9d8
@@ -182,3 +219,4 @@ def main(
 
 if __name__ == "__main__":
     fire.Fire(main)
+'''
