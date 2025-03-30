@@ -1,4 +1,4 @@
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:17<00:53, 17.78s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:33<00:33, 16.64s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:47<00:15, 15.44s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:51<00:00, 10.86s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:51<00:00, 12.87s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:10<00:30, 10.08s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:20<00:21, 10.52s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:31<00:10, 10.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:33<00:00,  7.26s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:33<00:00,  8.41s/it]
 Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
 Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
 Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.

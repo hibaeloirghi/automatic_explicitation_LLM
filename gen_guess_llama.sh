@@ -24,11 +24,11 @@ export HF_TOKEN="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"
 
 
 LANG=en
-DATASET=esqbv1htall
+DATASET=esqbv1htall #plqbv1ht512
 MP=1
 model_size=7B
 START=0
-END=-1
+END=5 #instead of -1 because that takes way too long
 MAX_LEN=660
 PORT=29509
 
