@@ -4,6 +4,8 @@ import numpy as np
 from autoexpl.tools import fileio
 from autoexpl import utils
 
+NUM_EVAL = 42
+
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     stream=sys.stdout,

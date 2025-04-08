@@ -172,8 +172,7 @@ class CurveScore:
         return self.pipeline.predict(np.asarray([[x]]))[0]
 
 
-    #def winning_players_proportion(t: float):
-    def winning_players_proportion(self, t: float): # changed this because of error calling gather_guessbuzz_llama.py
+    def winning_players_proportion(t: float):
         """Proportion of players that have correctly guessed the answer by length t.add()
         https://github.com/Pinafore/848-hw/blob/main/hw1/run_e2e_eval.py
         This metric is implemented in https://arxiv.org/pdf/1904.04792.pdf (Page 26)."""
