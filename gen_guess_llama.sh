@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=gen_guess_llama
-#SBATCH --time=23:00:00
+#SBATCH --time=2-00:00:00
 #SBATCH --mem=200gb
 #SBATCH --account=scavenger
 #SBATCH --partition=scavenger
@@ -23,12 +23,12 @@ export HF_HOME="/fs/clip-scratch/eloirghi/explicitation/.cache"
 export HF_TOKEN="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"
 
 
-LANG=en
-DATASET=esqbv1htall #plqbv1ht512
+LANG=es
+DATASET=esqbv1htall #plqbv1ht512 
 MP=1
 model_size=7B
 START=0
-END=5 #instead of -1 because that takes way too long
+END=2 #instead of -1 because that takes way too long
 MAX_LEN=660
 PORT=29509
 
@@ -43,6 +43,13 @@ SCRIPT=/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/autoexpl/xqb/
 
 
 # No need for TARGET_FOLDER anymore as we're loading from HF
+#torchrun --nnodes=1 --master_port $PORT --nproc_per_node $MP -- \
+#    $SCRIPT --lang $LANG --dataset-name $DATASET \
+#    --start $START --end $END --max-seq-len $MAX_LEN
+
+# No need for TARGET_FOLDER anymore as we're loading from HF
 torchrun --nnodes=1 --master_port $PORT --nproc_per_node $MP -- \
-    $SCRIPT --lang $LANG --dataset-name $DATASET \
-    --start $START --end $END --max-seq-len $MAX_LEN
+$SCRIPT --lang $LANG --dataset-name $DATASET \
+    --start $START --end $END --max-seq-len $MAX_LEN \
+    --model-id "meta-llama/Llama-3.1-8B"
+

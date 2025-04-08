@@ -68,7 +68,8 @@ def parse_llama_output(input_string, nguess, filler):
             pairs = []
     return pairs
 
-
+'''
+# commenting this out because ran into assert exp_id in cache AssertionError
 def parse_raw_guess(
     cache,
     qanta_json,
@@ -151,6 +152,97 @@ def parse_raw_guess(
         f"{total_counter=} {incomplete_counter=} {incomplete_counter/total_counter*100:0.2f}%"
     )
     return gathers
+'''
+
+def parse_raw_guess(
+    cache,
+    qanta_json,
+    word_skip,
+    lang,
+    nguess,
+    tasktype="topone_ans_conf",
+    filler=("unknown", 0.001),
+):
+    qidmap = qidmap_lqus2dict(qanta_json["questions"])
+    gathers = {}
+    total_counter = 0
+    incomplete_counter = 0
+    missing_ids = 0
+    
+    for i, qusjson in enumerate(qanta_json["questions"]):
+        exp_id = qusjson["qanta_id"]
+        if exp_id not in cache:
+            # Skip this ID if it's not in the cache instead of failing
+            missing_ids += 1
+            continue
+            
+        orig_id = qusjson["qdb_id"]
+        # if orig_id in lorig_id_entorder_before:
+        #     continue
+
+        # Baching
+        text = qusjson["text"]
+        tokenizations = qusjson["tokenizations"]
+        char_skip = qusjson["trick_id"]
+        lsubtexts, lindices = utils.char_entity_skip(text, char_skip, tokenizations)
+
+        origqus = qidmap[orig_id]
+        clsubtexts, clindices = utils.char_entity_skip(
+            origqus["text"], origqus["trick_id"], origqus["tokenizations"]
+        )
+        assert len(lindices) == len(clindices)
+        if "hint" in tasktype:
+            lindices = clindices
+
+        new_indices = []
+        for tokenization in tokenizations:
+            s, e = tokenization
+            assert s in lindices, f"{orig_id=} {exp_id=} {tokenization=} {lindices=}"
+            assert (
+                e + 1 in lindices
+            ), f"{orig_id=} {exp_id=} {tokenization=} {lindices=}"
+
+            new_indices.append(e + 1)
+        new_indices.append(lindices[-1])
+        gathers[exp_id] = []
+        for step in new_indices:
+            # for step in cache[exp_id]:
+            # for j, step in enumerate(lindices):
+            total_counter += 1
+            assert step in lindices
+            assert step in cache[exp_id]
+            gather = {}
+            # prompt = prompts[step]
+            rawoutput = cache[exp_id][step]
+            # if prompt in rawoutput:
+            #     rawoutput = rawoutput.replace(prompt, "").strip()
+            pairs = parse_llama_output(rawoutput, nguess, filler)
+            # Complement
+            if len(pairs) < nguess:
+                incomplete_counter += 1
+                ncomp = nguess - len(pairs)
+                # logger.info(
+                #     f"{exp_id=} {step=} Not enough guesses {len(pairs)=} Complement {ncomp=} with unknowns"
+                # )
+                for i in range(ncomp):
+                    pairs.append(filler)
+            assert len(pairs) == nguess
+            # print(f"{exp_id=} {step=} {wanted=}")
+            guesses = [guess for guess, score in pairs]
+            scores = [score for guess, score in pairs]
+            gather["char_index"] = step
+            gather["guess"] = guesses[0]
+            gather["guesses"] = guesses
+            gather["score"] = scores[0]
+            gather["scores"] = scores
+
+            gathers[exp_id].append(gather)
+    logger.info(
+        f"{total_counter=} {incomplete_counter=} {incomplete_counter/total_counter*100:0.2f}% {missing_ids=}"
+    )
+    return gathers
+
+
 
 
 def main(args):

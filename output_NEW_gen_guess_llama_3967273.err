@@ -1,0 +1,169 @@
+[I402 16:46:58.331230822 debug.cpp:50] [c10d] The debug level is set to DETAIL.
+W0402 16:47:00.946550 179447 .venv/lib/python3.9/site-packages/torch/distributed/run.py:792] 
+W0402 16:47:00.946550 179447 .venv/lib/python3.9/site-packages/torch/distributed/run.py:792] *****************************************
+W0402 16:47:00.946550 179447 .venv/lib/python3.9/site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0402 16:47:00.946550 179447 .venv/lib/python3.9/site-packages/torch/distributed/run.py:792] *****************************************
+[I402 16:47:00.410363397 TCPStore.cpp:270] [c10d - debug] The server has started on port = 29500.
+[I402 16:47:00.410423757 socket.cpp:780] [c10d - debug] The client socket will attempt to connect to an IPv6 address of (localhost, 29500).
+[I402 16:47:00.410865915 socket.cpp:854] [c10d - trace] The client socket is attempting to connect to [localhost]:29500.
+[I402 16:47:00.411030084 socket.cpp:950] [c10d] The client socket has connected to [localhost]:29500 on SocketImpl(fd=11, addr=[localhost]:44072, remote=[localhost]:29500).
+[I402 16:47:00.411061074 TCPStore.cpp:306] [c10d - debug] TCP client connected to host localhost:29500
+[I402 16:47:00.411122204 TCPStoreLibUvBackend.cpp:1149] [c10d - debug] Uv main loop running
+[I402 16:47:00.411183434 TCPStoreLibUvBackend.cpp:777] [c10d - trace] validate magic:1015412686 address:[localhost]:44072
+[I402 16:47:00.411188904 TCPStoreLibUvBackend.cpp:790] [c10d - trace] ping nonce:179447 address:[localhost]:44072
+[I402 16:47:00.411275733 TCPStoreLibUvBackend.cpp:826] [c10d - trace] compareAndSet key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:01.718306617 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:01.718906695 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:01.722841388 TCPStoreLibUvBackend.cpp:826] [c10d - trace] compareAndSet key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:01.725451998 TCPStore.cpp:270] [c10d - debug] The server has started on port = 35163.
+[I402 16:47:01.725483937 socket.cpp:780] [c10d - debug] The client socket will attempt to connect to an IPv6 address of (gammagpu04.umiacs.umd.edu, 35163).
+[I402 16:47:01.725518397 socket.cpp:854] [c10d - trace] The client socket is attempting to connect to [gammagpu04.umiacs.umd.edu]:35163.
+[I402 16:47:01.725850376 socket.cpp:950] [c10d] The client socket has connected to [gammagpu04.umiacs.umd.edu]:35163 on SocketImpl(fd=19, addr=[gammagpu04.umiacs.umd.edu]:33976, remote=[gammagpu04.umiacs.umd.edu]:35163).
+[I402 16:47:01.725879946 TCPStore.cpp:306] [c10d - debug] TCP client connected to host gammagpu04.umiacs.umd.edu:35163
+[I402 16:47:01.725929816 TCPStoreLibUvBackend.cpp:1149] [c10d - debug] Uv main loop running
+[I402 16:47:01.725983215 TCPStoreLibUvBackend.cpp:777] [c10d - trace] validate magic:1015412686 address:[gammagpu04.umiacs.umd.edu]:33976
+[I402 16:47:01.725988075 TCPStoreLibUvBackend.cpp:790] [c10d - trace] ping nonce:179447 address:[gammagpu04.umiacs.umd.edu]:33976
+[I402 16:47:01.726097275 TCPStoreLibUvBackend.cpp:807] [c10d - trace] set key:/torch.rendezvous.none.0/MASTER_ADDR address:[localhost]:44072
+[I402 16:47:01.726104585 TCPStoreLibUvBackend.cpp:807] [c10d - trace] set key:/torch.rendezvous.none.0/MASTER_PORT address:[localhost]:44072
+[I402 16:47:01.726108195 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:01.726141565 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none.0/MASTER_ADDR address:[localhost]:44072
+[I402 16:47:01.726181325 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:01.726212394 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none.0/MASTER_PORT address:[localhost]:44072
+[I402 16:47:01.726582403 TCPStoreLibUvBackend.cpp:807] [c10d - trace] set key:/torch.rendezvous.none.0/torchelastic/role_info/0 address:[localhost]:44072
+[I402 16:47:01.726591213 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:01.726624413 TCPStoreLibUvBackend.cpp:985] [c10d - trace] multi_get key_count:1 address:[localhost]:44072
+[I402 16:47:01.726722922 TCPStoreLibUvBackend.cpp:1015] [c10d - trace] multi_set key_count:1 address:[localhost]:44072
+[I402 16:47:01.726730232 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:01.726761632 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none.0/torchelastic/assigned_ranks/0 address:[localhost]:44072
+[I402 16:47:02.794531268 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:02.794643208 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:03.551121848 debug.cpp:50] [c10d] The debug level is set to DETAIL.
+[I402 16:47:03.593857161 debug.cpp:50] [c10d] The debug level is set to DETAIL.
+[I402 16:47:03.599846347 debug.cpp:50] [c10d] The debug level is set to DETAIL.
+[I402 16:47:03.812531470 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:03.812619159 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:04.818672370 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:04.818762339 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:05.822454250 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:05.822539399 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:06.789782540 TCPStoreLibUvBackend.cpp:826] [c10d - trace] compareAndSet key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:07.794223977 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:07.794307357 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:08.800670466 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:08.800761736 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:09.803100221 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:09.803187111 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:10.804878770 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:10.804950869 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:11.792161008 TCPStoreLibUvBackend.cpp:826] [c10d - trace] compareAndSet key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:12.809155383 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:12.809228153 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:13.811121220 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:13.811195480 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:14.817551979 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:14.817641109 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:15.820734832 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:15.820822471 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:16.795267572 TCPStoreLibUvBackend.cpp:826] [c10d - trace] compareAndSet key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:17.849774383 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:17.849860553 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:18.863056724 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:18.863142123 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:19.866193916 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:19.866284396 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:20.879464727 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:20.879545357 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:21.808788684 TCPStoreLibUvBackend.cpp:826] [c10d - trace] compareAndSet key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:22.906807805 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:22.906889895 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:23.928546551 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:23.928631991 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+[I402 16:47:24.960296126 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:24.971142541 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+usage: NEW_gen_guess_llama_split.py [-h] [--model-id MODEL_ID]
+                                    [--max-seq-len MAX_SEQ_LEN]
+                                    [--max-batch-size MAX_BATCH_SIZE]
+                                    --input-file INPUT_FILE --output-file
+                                    OUTPUT_FILE [--temperature TEMPERATURE]
+                                    [--top-p TOP_P]
+NEW_gen_guess_llama_split.py: error: the following arguments are required: --input-file, --output-file
+usage: NEW_gen_guess_llama_split.py [-h] [--model-id MODEL_ID]
+                                    [--max-seq-len MAX_SEQ_LEN]
+                                    [--max-batch-size MAX_BATCH_SIZE]
+                                    --input-file INPUT_FILE --output-file
+                                    OUTPUT_FILE [--temperature TEMPERATURE]
+                                    [--top-p TOP_P]
+NEW_gen_guess_llama_split.py: error: the following arguments are required: --input-file, --output-file
+usage: NEW_gen_guess_llama_split.py [-h] [--model-id MODEL_ID]
+                                    [--max-seq-len MAX_SEQ_LEN]
+                                    [--max-batch-size MAX_BATCH_SIZE]
+                                    --input-file INPUT_FILE --output-file
+                                    OUTPUT_FILE [--temperature TEMPERATURE]
+                                    [--top-p TOP_P]
+NEW_gen_guess_llama_split.py: error: the following arguments are required: --input-file, --output-file
+[I402 16:47:25.033284050 TCPStoreLibUvBackend.cpp:919] [c10d - trace] wait key_count:1 address:[localhost]:44072
+[I402 16:47:25.033391160 TCPStoreLibUvBackend.cpp:841] [c10d - trace] get key:/torch.rendezvous.none address:[localhost]:44072
+E0402 16:47:26.214372 179447 .venv/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 2) local_rank: 0 (pid: 179452) of binary: /fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/bin/python3.9
+[I402 16:47:26.663049193 TCPStoreLibUvBackend.cpp:826] [c10d - trace] compareAndSet key:/torch.rendezvous.none address:[localhost]:44072
+Traceback (most recent call last):
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/.venv/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/fs/clip-projects/qest/eloirghi/automatic_explicitation_LLM/autoexpl/xqb/NEW_gen_guess_llama_split.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-04-02_16:47:26
+  host      : gammagpu04.umiacs.umd.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 2 (pid: 179453)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-04-02_16:47:26
+  host      : gammagpu04.umiacs.umd.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 2 (pid: 179454)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-02_16:47:26
+  host      : gammagpu04.umiacs.umd.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 2 (pid: 179452)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[I402 16:47:26.717653848 TCPStoreLibUvBackend.cpp:120] [c10d - debug] Read callback failed. code:-4095 name:EOF desc:end of file
+[I402 16:47:26.717759977 TCPStoreLibUvBackend.cpp:1081] [c10d - debug] Store exit requested
+
+[I402 16:47:26.717770257 TCPStoreLibUvBackend.cpp:1152] [c10d - debug] UV main loop done: res:1
+[I402 16:47:26.717774827 TCPStoreLibUvBackend.cpp:1158] [c10d - debug] Walking live handles prior to closing clients
+[I402 16:47:26.717778317 TCPStoreLibUvBackend.cpp:1139] [c10d - debug] UV live handle type 12 active:1 is-closing:0
+[I402 16:47:26.717789827 TCPStoreLibUvBackend.cpp:1168] [c10d - debug] Walking live handles after closing clients
+[I402 16:47:26.717792777 TCPStoreLibUvBackend.cpp:1139] [c10d - debug] UV live handle type 12 active:0 is-closing:1
+[I402 16:47:26.717796007 TCPStoreLibUvBackend.cpp:1177] [c10d] uv_loop_close failed with:-16 errn:EBUSY desc:resource busy or locked
+[I402 16:47:26.717825877 TCPStoreLibUvBackend.cpp:1187] [c10d] uv_loop cleanup finished.
+[I402 16:47:26.717991206 TCPStoreLibUvBackend.cpp:120] [c10d - debug] Read callback failed. code:-4095 name:EOF desc:end of file
+[I402 16:47:26.718037976 TCPStoreLibUvBackend.cpp:1081] [c10d - debug] Store exit requested
+
+[I402 16:47:26.718045916 TCPStoreLibUvBackend.cpp:1152] [c10d - debug] UV main loop done: res:1
+[I402 16:47:26.718049256 TCPStoreLibUvBackend.cpp:1158] [c10d - debug] Walking live handles prior to closing clients
+[I402 16:47:26.718052266 TCPStoreLibUvBackend.cpp:1139] [c10d - debug] UV live handle type 12 active:1 is-closing:0
+[I402 16:47:26.718060606 TCPStoreLibUvBackend.cpp:1168] [c10d - debug] Walking live handles after closing clients
+[I402 16:47:26.718074696 TCPStoreLibUvBackend.cpp:1139] [c10d - debug] UV live handle type 12 active:0 is-closing:1
+[I402 16:47:26.718077716 TCPStoreLibUvBackend.cpp:1177] [c10d] uv_loop_close failed with:-16 errn:EBUSY desc:resource busy or locked
+[I402 16:47:26.718091786 TCPStoreLibUvBackend.cpp:1187] [c10d] uv_loop cleanup finished.

@@ -1,0 +1,7 @@
+2025-04-02 11:24:18,715 Loaded file succesfully in 0.034sec, size: 3.5MiB, loc: xqb_eval/extrinsic/esqbv1htall.pair_coment_charentskip_dedup_gent4.es.json 
+2025-04-02 11:24:18,716 Starting from scratch. No mid result found
+2025-04-02 11:46:51,766 Success 0/2154 exp_id=30000000000 takes 1269.215 sec. len(results)=31
+2025-04-02 12:01:57,928 Success 1/2154 exp_id=30000000001 takes 906.160 sec. len(results)=31
+2025-04-02 12:21:08,021 Success 2/2154 exp_id=30000000002 takes 1150.088 sec. len(results)=31
+2025-04-02 12:51:49,158 Success 3/2154 exp_id=30000000003 takes 1841.135 sec. len(results)=31
+2025-04-02 13:10:43,628 Success 4/2154 exp_id=30000000100 takes 1134.457 sec. len(results)=31
